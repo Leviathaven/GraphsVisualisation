@@ -1,0 +1,129 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://HowToUse.gd" type="Script" id=1]
+[ext_resource path="res://Font/Font.tres" type="DynamicFont" id=2]
+[ext_resource path="res://menuscreenshot.png" type="Texture" id=3]
+
+[node name="Node" type="ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 389.201, 0 )
+color = Color( 0.0470588, 0.67451, 0.603922, 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="menuscreenshot" type="Sprite" parent="."]
+position = Vector2( 196.628, 336.342 )
+scale = Vector2( 1.28162, 1.18352 )
+texture = ExtResource( 3 )
+
+[node name="DrawVerticesInstr" type="RichTextLabel" parent="."]
+anchor_left = 0.378
+anchor_top = 0.065
+anchor_right = 0.968
+anchor_bottom = 0.211
+margin_left = -0.0720215
+margin_top = 0.249996
+margin_right = -0.232056
+margin_bottom = -0.250015
+custom_fonts/normal_font = ExtResource( 2 )
+visible_characters = 0
+percent_visible = 0.0
+text = "Порядок действий здесь довольно прост: введите целочисленный ключ в поле над кнопкой, затем нажмите на кнопку и, наконец, нажмите на любую точку экрана, не лежащую на меню, чтобы вершина с таким ключом появилась на экране. Нельзя добавить вершину, номер которой уже есть."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ShowVerticeInstr" type="Button" parent="."]
+anchor_left = 0.492
+anchor_right = 0.816
+anchor_bottom = 0.06
+margin_left = 0.191986
+margin_top = 8.0
+margin_right = 0.415955
+custom_fonts/font = ExtResource( 2 )
+text = "Открыть инструкцию к рисованию вершин"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ShowEdgeInstr" type="Button" parent="."]
+anchor_left = 0.444
+anchor_top = 0.247
+anchor_right = 0.857
+anchor_bottom = 0.287
+margin_left = 0.343994
+margin_top = -0.249985
+margin_right = 0.431946
+margin_bottom = -0.249985
+custom_fonts/font = ExtResource( 2 )
+text = "Открыть инструкцию по рисованию и удалению рёбер"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EdgesInstr" type="RichTextLabel" parent="."]
+anchor_left = 0.378
+anchor_top = 0.316
+anchor_right = 0.95
+anchor_bottom = 0.587
+margin_left = -0.0720215
+margin_top = -1.52588e-05
+margin_right = 0.199951
+margin_bottom = -0.25
+custom_fonts/normal_font = ExtResource( 2 )
+visible_characters = 0
+percent_visible = 0.0
+text = "В левом поле указывается вершина-начало ребра, в правом - конец ребра. Если вы нажмёте кнопку \"Нарисовать ребро\", на экране появится ребро между двумя вершинами, указанными в соответствующих полях. Если одной из вершин нет в графе, появится соответствующее сообщение. Удаление работает аналогично. Если в графе не окажется одного из рёбер - появится сообщение. Если в графе нет такого ребра - появится сообщение. Если всё в порядке - ребро исчезнет с экрана и будет удалено из графа. "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ShowFsInstr" type="Button" parent="."]
+anchor_left = 0.492
+anchor_top = 0.64
+anchor_right = 0.812
+anchor_bottom = 0.68
+margin_left = 0.192017
+margin_right = 0.511963
+margin_bottom = 3.05176e-05
+custom_fonts/font = ExtResource( 2 )
+text = "Открыть инструции по работе с обходами"
+flat = true
+
+[node name="FSInstr" type="RichTextLabel" parent="."]
+anchor_left = 0.394
+anchor_top = 0.708
+anchor_right = 0.934
+anchor_bottom = 0.949
+margin_left = -0.456024
+margin_right = -0.416016
+margin_bottom = 0.249939
+custom_fonts/normal_font = ExtResource( 2 )
+visible_characters = 0
+percent_visible = 0.0
+text = "В поле указываем номер вершины, с которой будет начинаться обход. Кнопки с пометкой (шаг) запускают пошаговую работу соответствующих алгоритмов, каждый новый шаг активируется по нажатию клавиши \"Правая стрелочка\". Кнопки с пометкой (пост) начинают соответствующие обходы, работающие самостоятельно, без участия пользователя. Каждый шаг появлятся с разрывом в 1 секунду."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ReturnToDrawing" type="Button" parent="."]
+anchor_left = 0.055
+anchor_top = 0.898
+anchor_right = 0.325
+anchor_bottom = 0.978
+margin_left = -0.0107994
+margin_top = -0.0275269
+margin_right = -0.490814
+margin_bottom = -0.0275269
+custom_fonts/font = ExtResource( 2 )
+text = "Вернуться к работе с графом"
+flat = true
+[connection signal="pressed" from="ShowVerticeInstr" to="." method="_on_ShowVerticeInstr_pressed"]
+[connection signal="pressed" from="ShowEdgeInstr" to="." method="_on_ShowEdgeInstr_pressed"]
+[connection signal="pressed" from="ShowFsInstr" to="." method="_on_ShowFsInstr_pressed"]
+[connection signal="pressed" from="ReturnToDrawing" to="." method="_on_ReturnToDrawing_pressed"]

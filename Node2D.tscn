@@ -1,0 +1,270 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Node2D.gd" type="Script" id=1]
+[ext_resource path="res://Font/Font.tres" type="DynamicFont" id=2]
+
+[node name="Node2D" type="ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -319.0
+margin_bottom = 1.0
+color = Color( 0.0470588, 0.67451, 0.603922, 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+
+[node name="Menu" type="ColorRect" parent="."]
+anchor_left = 0.999
+anchor_right = 1.454
+anchor_bottom = 1.0
+margin_left = -0.295044
+margin_top = 1.25992
+margin_right = -0.0700684
+margin_bottom = 9.25989
+color = Color( 0.4, 0.196078, 0.266667, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AddNewKey" type="TextEdit" parent="Menu"]
+anchor_left = 0.255
+anchor_top = 0.055
+anchor_right = 0.798
+anchor_bottom = 0.113
+margin_left = 0.153992
+margin_top = 0.142998
+margin_right = -0.149017
+margin_bottom = -0.179001
+custom_fonts/font = ExtResource( 2 )
+custom_colors/background_color = Color( 0.298039, 0.0196078, 0.164706, 1 )
+syntax_highlighting = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StartOfEdge" type="TextEdit" parent="Menu"]
+anchor_left = 0.115
+anchor_top = 0.282
+anchor_right = 0.414
+anchor_bottom = 0.339
+margin_left = 0.0850067
+margin_top = -0.0380096
+margin_right = 0.106018
+margin_bottom = 0.698975
+custom_fonts/font = ExtResource( 2 )
+custom_colors/background_color = Color( 0.298039, 0.0196078, 0.164706, 1 )
+syntax_highlighting = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EndOfEdge" type="TextEdit" parent="Menu"]
+anchor_left = 0.586
+anchor_top = 0.282
+anchor_right = 0.882
+anchor_bottom = 0.339
+margin_left = -0.105957
+margin_top = -0.0379944
+margin_right = 0.878082
+margin_bottom = 0.699005
+custom_fonts/font = ExtResource( 2 )
+custom_colors/background_color = Color( 0.298039, 0.0196078, 0.164706, 1 )
+syntax_highlighting = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Source" type="TextEdit" parent="Menu"]
+anchor_left = 0.335
+anchor_top = 0.583
+anchor_right = 0.631
+anchor_bottom = 0.629
+margin_left = -0.0332718
+margin_top = -0.37854
+margin_right = -0.0492859
+margin_bottom = -0.292542
+custom_fonts/font = ExtResource( 2 )
+custom_colors/background_color = Color( 0.298039, 0.0196078, 0.164706, 1 )
+syntax_highlighting = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BtnNewKey" type="Button" parent="Menu"]
+anchor_left = 0.019
+anchor_top = 0.123
+anchor_right = 0.987
+anchor_bottom = 0.162
+margin_left = -0.098999
+margin_top = -0.357002
+margin_right = -3.82697
+margin_bottom = 0.0419998
+custom_fonts/font = ExtResource( 2 )
+text = "Добавьте к графу введённую вершину"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FlagButton" type="Button" parent="Menu"]
+anchor_left = 0.069
+anchor_top = 0.197
+anchor_right = 0.947
+anchor_bottom = 0.246
+margin_left = -0.148998
+margin_top = 0.0269928
+margin_right = 0.0130615
+margin_bottom = 0.185989
+custom_fonts/font = ExtResource( 2 )
+disabled = true
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FlagButton2" type="Button" parent="Menu"]
+anchor_left = 0.089
+anchor_top = 0.518
+anchor_right = 0.936
+anchor_bottom = 0.557
+margin_left = 0.0276775
+margin_top = -0.195557
+margin_right = 0.140717
+margin_bottom = 0.20343
+custom_fonts/font = ExtResource( 2 )
+disabled = true
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BtnAddEdge" type="Button" parent="Menu"]
+anchor_left = 0.28
+anchor_top = 0.377
+anchor_right = 0.737
+anchor_bottom = 0.437
+margin_left = -0.100319
+margin_top = -0.143005
+margin_right = 2.20271
+margin_bottom = 0.316986
+custom_fonts/font = ExtResource( 2 )
+text = "Нарисовать ребро"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BtnDeleteEdge" type="Button" parent="Menu"]
+anchor_left = 0.312
+anchor_top = 0.462
+anchor_right = 0.682
+anchor_bottom = 0.5
+margin_left = -0.151985
+margin_top = 0.34198
+margin_right = 4.07805
+margin_bottom = 1.5
+custom_fonts/font = ExtResource( 2 )
+text = "Удалить ребро"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BFSBtn" type="Button" parent="Menu"]
+anchor_left = 0.517
+anchor_top = 0.664
+anchor_right = 0.947
+anchor_bottom = 0.713
+margin_left = 0.0447388
+margin_top = -0.298279
+margin_right = 0.0147705
+margin_bottom = -0.139221
+custom_fonts/font = ExtResource( 2 )
+text = "Начать BFS (шаг)"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BFSBtn2" type="Button" parent="Menu"]
+anchor_left = 0.516
+anchor_top = 0.729
+anchor_right = 0.961
+anchor_bottom = 0.778
+margin_left = -0.134293
+margin_top = 0.366638
+margin_right = 0.020752
+margin_bottom = 0.17572
+custom_fonts/font = ExtResource( 2 )
+text = "Начать BFS (пост)"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DFSBtn" type="Button" parent="Menu"]
+anchor_left = 0.058
+anchor_top = 0.664
+anchor_right = 0.5
+anchor_bottom = 0.713
+margin_left = -0.0602875
+margin_top = -0.298279
+margin_right = -3.94226
+margin_bottom = -0.139221
+custom_fonts/font = ExtResource( 2 )
+text = "Начать DFS (шаг)"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DFSBtn2" type="Button" parent="Menu"]
+anchor_left = 0.048
+anchor_top = 0.728
+anchor_right = 0.494
+anchor_bottom = 0.776
+margin_left = 0.0937119
+margin_top = 0.12561
+margin_right = -0.0722656
+margin_bottom = -0.306335
+custom_fonts/font = ExtResource( 2 )
+text = "Начать DFS (пост)"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OpenInstructions" type="Button" parent="Menu"]
+anchor_left = 0.046
+anchor_top = 0.835
+anchor_right = 0.971
+anchor_bottom = 0.946
+margin_left = -0.153694
+margin_top = 0.357544
+margin_right = -0.0786743
+margin_bottom = 0.108521
+custom_fonts/font = ExtResource( 2 )
+text = "Инструкция"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Timer2" type="Timer" parent="."]
+one_shot = true
+[connection signal="pressed" from="Menu/BtnNewKey" to="." method="_on_BtnNewKey_pressed"]
+[connection signal="pressed" from="Menu/BtnAddEdge" to="." method="_on_BtnAddEdge_pressed"]
+[connection signal="pressed" from="Menu/BtnDeleteEdge" to="." method="_on_BtnDeleteEdge_pressed"]
+[connection signal="pressed" from="Menu/BFSBtn" to="." method="_on_BFSBtn_pressed"]
+[connection signal="pressed" from="Menu/BFSBtn2" to="." method="_on_BFSBtn2_pressed"]
+[connection signal="pressed" from="Menu/DFSBtn" to="." method="_on_DFSBtn_pressed"]
+[connection signal="pressed" from="Menu/DFSBtn2" to="." method="_on_DFSBtn2_pressed"]
+[connection signal="pressed" from="Menu/OpenInstructions" to="." method="_on_OpenInstructions_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_Timer2_timeout"]

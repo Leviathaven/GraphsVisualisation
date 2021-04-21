@@ -1,0 +1,64 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Font/Font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://font.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://PrintInTheTypeOfGraph.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 23
+outline_color = Color( 0.00784314, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0470588, 0.67451, 0.603922, 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NameScene" type="Label" parent="."]
+anchor_left = 0.258
+anchor_top = 0.3
+anchor_right = 0.796
+anchor_bottom = 0.34
+margin_left = 0.348267
+margin_right = 0.436218
+custom_fonts/font = SubResource( 1 )
+text = "Поставьте галочку, если хотите, чтобы Ваш граф был ориентированным"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckOrient" type="CheckBox" parent="."]
+anchor_left = 0.344
+anchor_top = 0.408
+anchor_right = 0.712
+anchor_bottom = 0.465
+margin_left = -0.105255
+margin_top = 2.57834
+margin_right = 0.0627441
+margin_bottom = -0.0716858
+custom_fonts/font = ExtResource( 1 )
+text = "Да, я хочу нарисовать ориентированный граф"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AcceptData" type="Button" parent="."]
+anchor_left = 0.399
+anchor_top = 0.765
+anchor_right = 0.618
+anchor_bottom = 0.815
+margin_left = -0.466095
+margin_top = -0.0619507
+margin_right = 0.277954
+margin_bottom = -0.0619507
+custom_fonts/font = ExtResource( 1 )
+text = "Перейти к рисованию графа"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="AcceptData" to="." method="_on_AcceptData_pressed"]
